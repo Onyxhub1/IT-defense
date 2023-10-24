@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --primary1: #00bbff;
+    --primary2: #0074c1;
+    --primary3: #00719c;
+    --primary4: #002743;
+    --back-color: #f9fcff;
+    --paragraph-size: .8rem;
+}
+
+body {
+    background: var(--back-color);
+}
+
+.container{
+    padding: 1em;
+}
+
+.s1 {
+    height: 40vh;
+    background: linear-gradient(0deg, #0000006c, #0000006c), url(../images/medium-shot-man-wearing-helmet.jpeg);
+    background-size: cover;
+    background-position: top;
+    color: white;
+}
+
+.c1 {
+    height: 100%;
+}
+
+.hero-contents {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-contents h1 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: .3em;
+}
+
+.hero-links {
+    display: flex;
+    align-items: center;
+    gap: .7em;
+}
+
+.hero-links a {
+    text-decoration: none;
+    color: white;
+    font-size: .85rem;
+}
+
+.hero-links a:hover {
+    text-decoration: underline;
+}
+
+.hero-links span {
+    font-size: .85rem;
+    text-decoration: underline;
+    color: var(--primary1);
+}
+
+
+/* s2 */
+
+.s2{
+    padding: 2em 0;
+}
+
+.contact-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.address-contact{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.location p{
+    font-size: 1.3rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: .3em;
+    margin-bottom: .2em;
+}
+
+.location p i{
+    color: var(--primary1);
+}
+
+.location span{
+    margin-left: 2em;
+    font-size: .8rem;
+}
+
+form{
+    background: var(--back-color);
+    padding: 2.5em 2em;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.254);
+    border-radius: .3em;
+}
+
+form h2{
+    font-weight: 500;
+    font-size: 1.7rem;
+    margin-bottom: .3em;
+}
+
+form p{
+    font-size: .9rem;
+    font-weight: 300;
+    line-height: 1.7em;
+    margin-bottom: 2em;
+}
+
+.inputbox{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.inputbox input, textarea{
+    font-size: .9rem;
+    padding: 1em;
+    border: none;
+    background: #00212e19;
+    outline: none;
+    transition: .1s;
+}
+
+.inputbox button{
+    padding: 1em;
+    font-size: .9rem;
+    text-transform: uppercase;
+    border: none;
+    background: var(--primary1);
+    color: white;
+}
+
+
+.inputbox input:focus,
+.inputbox textarea:focus{
+    outline: 1px solid var(--primary1);
+}
+
+
+@media screen and (min-width: 768px){
+
+    .container{
+        max-width: 768px;
+        margin: 0 auto;
+    }
+
+    .hero-contents h1 {
+        font-size: 2rem;
+    }
+
+    .s2{
+        padding: 5em 0;
+    }
+
+    .contact-container{
+        flex-direction: row;
+    }
+
+    .address-contact{
+        width: 40%;
+    }
+
+    form{
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .container{
+        max-width: 1200px;
+    }
+
+    .hero-contents {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .hero-contents h1 {
+        font-size: 3rem;
+    }
+
+    .contact-container{
+        align-items: center;
+    }
+
+    form h2{
+        font-size: 2.2rem;
+    }
+
+    form p{
+        font-size: 1rem;
+    }
+
+    .c2{
+        padding: 1em 2em;
+    }
+
+    .inputbox button{
+        cursor: pointer;
+    }
+    
+}

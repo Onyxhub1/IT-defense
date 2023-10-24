@@ -1,0 +1,539 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --primary1: #00bbff;
+    --primary2: #0074c1;
+    --primary3: #00719c;
+    --primary4: #002743;
+    --back-color: #f9fcff;
+    --paragraph-size: .8rem;
+}
+
+body{
+    background: var(--back-color);
+}
+
+.container{
+    padding: 1em;
+}
+
+.s1 {
+    height: 40vh;
+    background: linear-gradient(0deg, #00000058, #00000058), url(../images/close-up-blurry-hand-holding-pencil.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.c1 {
+    height: 100%;
+}
+
+.hero-contents {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-contents h1 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: .3em;
+}
+
+.hero-links {
+    display: flex;
+    align-items: center;
+    gap: .7em;
+}
+
+.hero-links a {
+    text-decoration: none;
+    color: white;
+    font-size: .85rem;
+}
+
+.hero-links a:hover {
+    text-decoration: underline;
+}
+
+.hero-links span {
+    font-size: .85rem;
+    text-decoration: underline;
+    color: var(--primary1);
+}
+
+
+/* s2 */
+
+.s2{
+    padding: 2em 0;
+}
+
+.services-list h1{
+    font-weight: 500;
+    margin-bottom: 1.5em;
+}
+
+.services-list h1 span{
+    color: var(--primary1);
+}
+
+.warehousing h2{
+    font-weight: 400;
+    font-size: 1.3rem;
+    margin-bottom: .6em;
+}
+
+.list{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
+}
+
+.service1{
+    padding: 3em 2em;
+    overflow: hidden;
+    box-shadow: 0 3px 15px #00000033;
+    transition: .3s;
+}
+
+.service1:hover{
+    background: var(--primary4);
+    color: white;
+}
+
+.service1:hover h3::after{
+    background: var(--primary1);
+}
+
+.service1 h3{
+    font-weight: 300;
+    margin-bottom: 1.5em;
+    position: relative;
+}
+
+.service1 h3::after{
+    content: '';
+    position: absolute;
+    width: 150%;
+    height: 1px;
+    background: #00bbff8e;
+    bottom: -40%;
+    left: 0;
+    transition: .3s;
+}
+
+.service1 p{
+    font-size: .8rem;
+    line-height: 2em;
+    letter-spacing: .9px;
+    font-weight: 300;
+}
+
+.services-list-contents{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+/* s3 */
+
+.s3{
+    background: #00212e12;
+    padding: 3em 0;
+}
+
+.c3{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.packaging h2{
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: .4em;
+    margin-bottom: .6em;
+}
+
+.packaging h2 i{
+    color: var(--primary1);
+    font-size: 2rem
+}
+
+.packaging p{
+    font-size: .8rem;
+    font-weight: 300;
+    line-height: 2em;
+    letter-spacing: .9px;
+}
+
+/* s4 */
+.s4{
+    background: url(../images/truck-services.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.added-list{
+    padding: 7em 2em 2em;
+    border-top: 1px solid #00709c9d;
+    -webkit-backdrop-filter: blur(.8em);
+    backdrop-filter: blur(.8em);
+    color: white;
+}
+
+.added-list h2{
+    font-weight: 500;
+    margin-bottom: .5em;
+}
+
+.added-list h2 span{
+    color: var(--primary1);
+}
+
+.added-list p{
+    font-size: .8rem;
+    font-weight: 300;
+    line-height: 2em;
+    letter-spacing: .9px;
+}
+
+/* s5 */
+
+.s5{
+    padding: 3em 0;
+}
+
+.c5-header{
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+.c5-header h2{
+    font-weight: 500;
+    margin-bottom: .4em;
+}
+
+.c5-header h2 span{
+    color: var(--primary1);
+}
+
+.c5 p{
+    font-size: .8rem;
+    font-weight: 300;
+    letter-spacing: .9px;
+    line-height: 2em;
+}
+
+.transport-items{
+    padding: 0 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5em;
+}
+
+.flex{
+    display: flex;
+    flex-direction: column;
+    gap: 3.5em;
+}
+
+.content-head{
+    background: url(../images/truck-transport.png);
+    background-size: cover;
+    background-position: center;
+    height: 25em;
+    position: relative;
+    margin-bottom: 2.7em;
+    border-radius: .1em;
+}
+
+.content-head h3{
+    font-weight: 500;
+    position: absolute;
+    width: 100%;
+    background: var(--back-color);
+    padding: 1em 2em;
+    border-left: 3px solid var(--primary1);
+    bottom: -8%;
+    left: -7%;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.205);
+}
+
+.ocean{
+    background: url(../images/ship-cargo.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.air{
+    background: url(../images/industrial-port-container.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.rail{
+    background: url(../images/railroad-track-transportation-mode-transport-locomotive-industry-freight-transportation-shipping-steam-train-generative-ai.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+/* s6 */
+
+.s6{
+    padding: 2em 0;
+    background: linear-gradient(0deg, #001422a6, #001422a6), url(../images/huge-cargo-crane-harbor-loading-yellow-container-ai-generative.jpeg);
+    background-size: cover;
+    background-position: left;
+}
+
+.contact{
+    text-align: center;
+    color: white;
+}
+
+.contact h1{
+    font-weight: 400;
+    font-size: 1.7rem;
+}
+
+.contact p{
+    font-size: var(--paragraph-size);
+    font-weight: 300;
+    margin-bottom: 1em;
+}
+
+.contact h1 span{
+    color: var(--primary1);
+}
+
+.contact h2{
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.contact a{
+    text-decoration: none;
+}
+
+.contact button{
+    padding: 1em 2em;
+    margin-top: .8em;
+    background: var(--primary1);
+    border: none;
+    cursor: pointer;
+    color: white;
+    border-radius: .1em;
+}
+
+@media screen and (min-width: 768px){
+
+    .container{
+        max-width: 850px;
+        margin: 0 auto;
+    }
+
+    .hero-contents {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .hero-contents h1 {
+        font-size: 2rem;
+    }
+
+    .list{
+        flex-direction: row;
+    }
+
+    .service1{
+        width: 50%;
+    }
+
+    .services-list h1{
+        font-size: 1.9rem;
+    }
+
+    .service1 h3::after{
+        bottom: -20%;
+    }
+
+    .c3{
+        flex-direction: row;
+    }
+
+    .packaging{
+        width: 50%;
+    }
+
+    
+
+    .added-list h2{
+        font-size: 1.7rem;
+    }
+
+    .added-list p{
+        font-size: .85rem;
+    }
+
+    .c5-header h2{
+        font-size: 1.9rem;
+    }
+
+    .c5-header p{
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .c5 p{
+        font-size: .85rem;
+    }
+
+    .flex{
+        flex-direction: row;
+    }
+
+    .transport-contents{
+        width: 50%;
+    }
+
+    .content-head{
+        height: 30em;
+    }
+
+    .s6{
+        padding: 4em 0;
+    }
+
+    .contact{
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .contact h2{
+        font-size: 2.4rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .container{
+        max-width: 1200px;
+    }
+
+    .hero-contents h1 {
+        font-size: 3rem;
+    }
+
+    .s2{
+        padding: 4em 0;
+    }
+
+    .services-list h1{
+        font-size: 2.2rem;
+        width: 70%;
+    }
+
+    .warehousing h2{
+        font-size: 1.7rem;
+    }
+
+    .service1 h3{
+        font-size: 1.35rem;
+    }
+
+    .service1 p{
+        font-size: .9rem;
+    }
+
+    .s3{
+        padding: 4em 0;
+    }
+
+    .packaging h2{
+        font-size: 1.7rem;
+    }
+
+    .packaging p{
+        font-size: .9rem;
+    }
+
+    .c4{
+        display: flex;
+    }
+
+    .added-list{
+        padding: 15em 2em 3em;
+        -webkit-backdrop-filter: blur();
+        backdrop-filter: blur();
+        border-left: 1px solid #00709c9d;
+        transition: .3s;
+        width: 100%;
+    }
+
+    .added-list h2{
+        transform: translateY(280px);
+        transition: .65s;
+    }
+
+    .added-list p{
+        opacity: 0;
+    }
+
+    .added-list:hover{
+        -webkit-backdrop-filter: blur(.8em);
+        backdrop-filter: blur(.8em);
+    }
+
+    .added-list:hover h2{
+        transform: translateY(0);
+    }
+
+    .added-list:hover p{
+        opacity: 1;
+        transition: .5s .45s;
+    }
+
+    .c5-header h2{
+        font-size: 2.2rem;
+    }
+
+    .c5 p{
+        font-size: .9rem;
+    }
+
+    .c5-header{
+        margin: 4em;
+    }
+
+    .content-head{
+        height: 35em;
+        margin-bottom: 3em;
+    }
+
+    .s6{
+        padding: 8em 0;
+    }
+
+    .contact h2{
+        font-size: 3.1rem;
+    }
+
+    .contact button{
+        margin-top: 1.5em;
+    }
+}

@@ -1,0 +1,1315 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root{
+    --primary1: #00bbff;
+    --primary2: #0074c1;
+    --primary3: #00719c;
+    --primary4: #002743;
+    --back-color: #f9fcff;
+    --paragraph-size: .8rem;
+}
+
+body{
+    background: var(--back-color);
+}
+
+.s1{
+    width: 100%;
+    height: 70vh;
+    overflow-x: hidden;
+}
+
+.carousel-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+}
+
+.container{
+    padding: 1em;
+}
+
+#left, #right{
+    display: none;
+}
+
+.c1{
+    background: linear-gradient(0deg, #01426da2, #01426da2), url(../images/cargo-ship-sea.jpeg);
+    background-size: cover;
+    background-position: center;
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.c2{
+    background: linear-gradient(0deg, #01426d99, #01426da2), url(../images/logistics-transportation-cargo-ship-cargo-plane-with-working-crane-bridge-shipyard-sunrise-logistic-import-export-transport-industry-background-ai-generative.jpeg);
+    background-size: cover;
+    background-position: center;
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.c3{
+    background: linear-gradient(0deg, #01426d99, #01426da2), url(../images/abundant-crates-cardboard-filled-warehouse-generated-by-ai.jpeg);
+    background-size: cover;
+    background-position: center;
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.hero-contents{
+    text-align: center;
+    margin-bottom: 5em;
+}
+
+.hero-contents h1{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.hero-contents p{
+    font-weight: 300;
+    font-size: .9rem;
+    margin: 1em 0;
+}
+
+.hero-contents button{
+    font-size: 1rem;
+    padding: .7em 1.5em;
+    border: none;
+    border-radius: .3em;
+    color: white;
+    background: var(--primary2);
+}
+
+.solutions{
+    position: absolute;
+    z-index: 900;
+    width: 85%;
+    top: 69%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: flex;
+    flex-direction: column;
+}
+
+.sol{
+    display: flex;
+    gap: 1em;
+    background: #f4faff;
+    padding: 1.5em 1.3em;
+    border-radius: 0.1em;
+    position: relative;
+    overflow: hidden;
+}
+
+.sol::after{
+    content: '';
+    position: absolute;
+    width: 5em;
+    height: 5em;
+    background: #00719c;
+    transform: rotate(45deg);
+    right: -12%;
+    bottom: -23%;
+}
+
+.sol i{
+    font-size: 1.8rem;
+    color: var(--primary1);
+}
+
+.sol-content h3{
+    margin-bottom: .4em;
+    font-weight: 500;
+}
+
+.sol-content p{
+    font-size: var(--paragraph-size);
+    font-weight: 300;
+    margin-bottom: .7em;
+}
+
+.sol-content a{
+    text-decoration: none;
+    color: var(--primary1);
+}
+
+.warehousing{
+    background: var(--primary4);
+    color: white;
+}
+
+
+/* second-page - about-page */
+
+.s2{
+    padding: 1em 0;
+}
+
+.about-items{
+    margin-bottom: 3em;
+}
+
+.about-items h2{
+    font-weight: 500;
+    margin-bottom: .5em;
+    position: relative;
+}
+
+.about-items h2::after{
+    content: '';
+    position: absolute;
+    width: 2em;
+    height: 4em;
+    top: -10%;
+    left: -3%;
+    background: #00000017;
+    transform: skewY(40deg);
+}
+
+.about-items span{
+    color: var(--primary1);
+}
+
+.about-items p{
+    font-weight: 300;
+    letter-spacing: .8px;
+    line-height: 2em;
+    font-size: var(--paragraph-size);
+    margin-bottom: 1.5em;
+}
+
+.about-items button{
+    padding: 1em 1.5em;
+    border: none;
+    border-radius: .2em;
+    background: #00000028;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.about-items button:hover{
+    background: var(--primary2);
+    color: white;
+}
+
+.about-img{
+    width: 100%;
+}
+
+.about-img img{
+    width: 100%;
+    border-radius: .2em;
+    height: 20em;
+    object-fit: cover;
+    object-position: left;
+}
+
+/* third-section -- services */
+
+.s3{
+    background: #00212e12;
+    padding: 3em 0;
+    margin-top: 2em;
+    position: relative;
+}
+
+.services{
+    z-index: 10;
+}
+
+.services-heading-content h2{
+    font-weight: 500;
+    margin-bottom: .5em;
+    position: relative;
+}
+
+.services-heading-content h2 span{
+    color: var(--primary1);
+}
+
+.s3::before{
+    content: '';
+    position: absolute;
+    width: 2.5em;
+    height: 5em;
+    top: 3%;
+    left: 1%;
+    background: #ffffff;
+    transform: skewY(40deg);
+}
+
+.s3::after{
+    content: '';
+    position: absolute;
+    width: 2.5em;
+    height: 5em;
+    top: 50%;
+    right: 1%;
+    background: var(--primary4);
+    transform: skewY(30deg);
+}
+
+.services-heading-content p{
+    font-weight: 300;
+    letter-spacing: .8px;
+    line-height: 1.7em;
+    font-size: var(--paragraph-size);
+    margin-bottom: 1em;
+    position: relative;
+}
+
+.services-heading-btn button{
+    padding: 1em 1.5em;
+    border: none;
+    border-radius: .2em;
+    background: var(--primary4);
+    cursor: pointer;
+    transition: .3s;
+    color: white;
+}
+
+.services-heading-btn button:hover{
+    background: var(--primary1);
+}
+
+
+.services-heading{
+    margin-bottom: 3em;
+}
+
+.services-content{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.flex1{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.services-info{
+    width: 100%;
+    padding: 2.5em 2em;
+    border-bottom: 3px solid var(--primary1);
+    background: #f1f6f9;
+    transition: .3s;
+}
+
+.services-infos{
+    background: url(../images/truck-with-white-trailer-that-says-scania-side.jpeg);
+    background-size: cover;
+    background-position: center;
+    border-radius: .1em;
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.228);
+}
+
+.plane{
+    background: url(../images/airplane-taking-off-airport-road.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.ship{
+    background: url(../images/shipping-industry-carries-cargo-large-container-ships-generative-ai.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.services-info:hover{
+    background: #002c3dca;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.services-info i{
+    font-size: 2.5rem;
+    color: var(--primary1);
+}
+
+.services-info h2{
+    font-weight: 500;
+    margin: .5em 0;
+}
+
+.services-info p{
+    font-weight: 300;
+    letter-spacing: .8px;
+    line-height: 1.7em;
+    font-size: var(--paragraph-size);
+    margin-bottom: 1em;
+}
+
+.services-info ul{
+    padding: 0 1em;
+}
+
+.services-info ul li{
+    font-weight: 400;
+    letter-spacing: .8px;
+    font-size: var(--paragraph-size);
+    margin-bottom: .5em;
+    color: #00bbff;
+}
+
+.services-info ul span{
+    color: black;
+}
+
+.services-info:hover span{
+    color: white;
+}
+
+
+/* fourth section - goals */
+.s4{
+    padding: 4em 0;
+    color: white;
+    background: linear-gradient(0deg, #002743e0, #002743e0), url(../images/logistics-warehouse-ai-generative.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.c6-heading h2{
+    font-weight: 500;
+    margin-bottom: .5em;
+    position: relative;
+}
+
+.c6-heading h2 span{
+    color: var(--primary1);
+}
+
+.c6-header button{
+    font-size: var(--paragraph-size);
+    padding: .7em 1.5em;
+    border: none;
+    border-radius: .3em;
+    color: white;
+    background: var(--primary1);
+    margin-bottom: 4em;
+}
+
+.choose{
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+.flex2{
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+.choose-contents a{
+    text-decoration: none;
+    color: white;
+    transition: color .3s;
+}
+
+.choose-contents a h3{
+    font-weight: 400;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: .5em;
+}
+
+.choose-contents a h3 i{
+    font-size: 1rem;
+    color: var(--primary1);
+}
+
+.choose-contents h3::after{
+    content:'';
+    position: absolute;
+    left: 0;
+    bottom: -40%;
+    width: 100%;
+    height: 1px;
+    background: #00bbff39;
+    transition: .3s;
+}
+
+.choose-contents a:hover{
+    color: var(--primary1);
+}
+
+.choose-contents a:hover h3::after{
+    background: var(--primary1);
+}
+
+.choose-contents p{
+    font-weight: 200;
+    letter-spacing: .8px;
+    line-height: 1.7em;
+    font-size: var(--paragraph-size);
+    margin-top: 2em;
+}
+
+
+/* fifth section - goals */
+
+.s5{
+    background: linear-gradient(0deg, #f9fcffe6, #f9fcffe6), url(../images/map.jpeg);
+    background-size: cover;
+    background-position: center;
+    padding: 2em 0;
+}
+
+.c7-heading h2{
+    font-weight: 500;
+    margin-bottom: .5em;
+    position: relative;
+    text-align: center;
+}
+
+.c7-heading h2 span{
+    color: var(--primary1);
+}
+
+.c7-heading p{
+    font-weight: 300;
+    letter-spacing: .8px;
+    line-height: 1.7em;
+    font-size: var(--paragraph-size);
+    margin-bottom: 3em;
+    text-align: center;
+}
+
+.goals-items{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.goals-content{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.goals-infos i{
+    font-size: 2.5rem;
+    color: var(--primary1);
+    margin-bottom: .1em;
+}
+
+.goals-infos h1{
+    color: var(--primary3);
+    font-weight: 400;
+    font-size: 2rem;
+    margin-bottom: .1em;
+}
+
+.goals-infos h3{
+    font-weight: 500;
+    margin-bottom: .4em;
+}
+
+.goals-infos p{
+    font-weight: 300;
+    letter-spacing: .8px;
+    font-size: var(--paragraph-size);
+}
+
+/* testimonials-section */
+
+.s-testimonials{
+    padding: 2em 0 3em;
+    background: #00212e12;
+    position: relative;
+}
+
+.s-testimonials::before {
+    content: '';
+    position: absolute;
+    width: 2.5em;
+    height: 5em;
+    top: 3%;
+    left: 1%;
+    background: #ffffff;
+    transform: skewY(30deg);
+}
+
+.t-heading{
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 1;
+}
+
+.t-heading h2{
+    font-weight: 500;
+    margin-bottom: .5em;
+}
+
+.t-heading h2 span{
+    color: var(--primary1);
+}
+
+.t-heading p{
+    font-size: var(--paragraph-size);
+    font-weight: 300;
+    letter-spacing: .8px;
+    line-height: 1.7em;
+}
+
+.t-heading{
+    margin-bottom: 4em;
+}
+
+.testimonial-container{
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.test-wrapper{
+    overflow: hidden;
+    width: 100%;
+}
+
+.testimonial-carousel{
+    width: 100%;
+    display: flex;
+}
+
+.testimonial{
+    min-width: 100%;
+    height: 100%;
+    padding: 0 1.5em;
+    background: #002743;
+    color: white;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: .3em;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.profile-img{
+    width: 5em;
+    height: 5em;
+}
+
+.profile-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-content h3{
+    font-weight: 500;
+}
+
+.profile-content p{
+    font-size: .9rem;
+    color: var(--primary1);
+}
+
+.profile{
+    margin-bottom: 1em;
+}
+
+.testimonial p{
+    font-size: var(--paragraph-size);
+    font-weight: 300;
+    letter-spacing: .8px;
+    line-height: 1.7em;
+}
+
+.testimonial-container i{
+    font-size: 2rem;
+    padding: .2em;
+    background: white;
+    border-radius: 50%;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.testimonial-container i:hover{
+    background: var(--primary1);
+    color: white;
+}
+
+.bx-chevron-left{
+    position: absolute;
+    top: 50%;
+    left: -8%;
+    transform: translate(-8%, -50%);
+}
+
+.bx-chevron-right{
+    position: absolute;
+    top: 50%;
+    right: -8%;
+    transform: translate(-8%, -50%);
+}
+
+/* sixth section - contac */
+
+.s6{
+    padding: 2em 0;
+    background: linear-gradient(0deg, #00142284, #00142284), url(../images/global-business-container-cargo.jpeg);
+    background-size: cover;
+    background-position: left;
+}
+
+.contact{
+    text-align: center;
+    color: white;
+}
+
+.contact h1{
+    font-weight: 400;
+    font-size: 1.7rem;
+}
+
+.contact p{
+    font-size: var(--paragraph-size);
+    font-weight: 300;
+    margin-bottom: 1em;
+}
+
+.contact h1 span{
+    color: var(--primary1);
+}
+
+.contact h2{
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.contact a{
+    text-decoration: none;
+}
+
+.contact button{
+    padding: 1em 2em;
+    margin-top: .8em;
+    background: var(--primary1);
+    border: none;
+    cursor: pointer;
+    color: white;
+    border-radius: .1em;
+}
+
+
+/* seventh section - tracking item */
+
+.s7{
+    padding: 2em 0 1em;
+    position: relative;
+    margin-top: 15em;
+}
+
+.track-container{
+    width: 95%;
+    margin: 0 auto;
+    background: #e0e4ec;
+    padding: 1.5em 1em;
+    text-align: center;
+    position: relative;
+}
+
+.track-container::after{
+    content: "";
+    width: 2.5em;
+    height: 5em;
+    position: absolute;
+    top: 5%;
+    right: -5%;
+    background: var(--primary4);
+    transform: skewY(40deg);
+}
+
+.track-container h2{
+    font-weight: 500;
+}
+
+.track-container h2 span{
+    color: var(--primary1);
+}
+
+.track-container p{
+    font-size: var(--paragraph-size);
+    font-weight: 300;
+    margin-bottom: 1em;
+}
+
+.input-container{
+    width: 100%;
+}
+
+.input-container input{
+    width: 100%;
+    padding: 1em;
+    background: white;
+    border: none;
+    border-radius: .2em;
+    margin-bottom: 1em;
+}
+
+.input-container input:focus{
+    outline: 1px solid #00bbff;
+}
+
+.input-container button{
+    padding: .8em 2em;
+    background: var(--primary1);
+    border: none;
+    cursor: pointer;
+    color: white;
+    border-radius: .1em;
+}
+
+@media screen and (max-width: 320px){
+    .solutions{
+        display: none;
+    }
+
+    .s2{
+        margin-top: 2em;
+    }
+}
+
+@media screen and (min-width: 768px){
+
+    .hero-contents h1{
+        font-size: 2.3rem;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .solutions{
+        flex-direction: row;
+    }
+
+    .container{
+        max-width: 768px;
+        margin: 0 auto;
+    }
+
+    .s7{
+        margin-top: 5em;
+    }
+
+    .about-items{
+        width: 90%;
+        margin: 0 auto 3em;
+    }
+
+    .about-items h2{
+        font-size: 1.9rem;
+    }
+
+    .about-items p{
+        font-size: .85rem;
+        margin-bottom: 1.5em;
+    }
+
+    .about-img img{
+        height: 30em;
+    }
+
+    .s3{
+        overflow: hidden;
+    }
+
+    .services-heading{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .services-heading-content{
+        width: 65%;
+    }
+
+    .c5{
+        z-index: 1;
+        position: -webkit-sticky;
+        position: sticky;
+    }
+
+    .skew-c{
+        position: absolute;
+        width: 15em;
+        height: 25em;
+        top: -15%;
+        right: 10%;
+        background: #f9fcff;
+        transform: skewY(30deg);
+    }
+
+    .services-heading-content h2{
+        font-size: 1.9rem;
+    }
+
+    .services-heading-content p{
+        font-size: .85rem;
+    }
+
+    .flex1{
+        flex-direction: row;
+    }
+
+    .services-heading-btn button{
+        padding: 1.2em 2.5em;
+    }
+
+    .services-info{
+        height: 100%;
+    }
+
+    .services-info p{
+        font-size: .85rem;
+    }
+
+    .plane, .land{
+        width: 50%;
+    }
+
+    .ship{
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .flex2{
+        flex-direction: row;
+    }
+
+    .choose-contents{
+        width: 42%;
+        margin: 0 auto;
+    }
+
+    .choose-contents p{
+        font-size: .85rem;
+    }
+
+    .c6-heading h2 {
+        font-size: 1.9rem;
+        width: 80%;
+        font-weight: 500;
+        margin-bottom: .5em;
+        position: relative;
+    }
+
+    .c6-heading h2 span {
+        color: var(--primary1);
+    }
+
+    .c6-header button {
+        padding: 1.1em 2.5em;
+        font-size: .9rem;
+        border-radius: .1em;
+        margin-bottom: 4em;
+    }
+
+    .c7-heading h2{
+        font-size: 1.9rem;
+    }
+
+    .c7-heading p{
+        font-size: .85rem;
+        width: 80%;
+        margin: 0 auto 3em;
+    }
+
+    .goals-content{
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .goals-infos{
+        width: 40%;
+    }
+
+    .s5{
+        padding: 4em 0;
+    }
+
+    .s-testimonials{
+        overflow: hidden;
+    }
+
+    .t-heading h2{
+        font-size: 1.9rem;
+    }
+
+    .t-heading p{
+        font-size: .85rem;
+    }
+
+    .testimonial-container{
+        width: 70%;
+    }
+
+    .bx-chevron-left {
+        left: -12%;
+    }
+
+    .bx-chevron-right {
+        right: -13%;
+    }
+
+    .s6{
+        padding: 4em 0;
+    }
+
+    .contact{
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .contact h2{
+        font-size: 2.4rem;
+    }
+
+    .s7{
+        padding: 3em 0;
+    }
+
+    .track-container{
+        width: 80%;
+        padding: 1.5em 2em;
+    }
+
+    .track-container h2{
+        font-size: 1.9rem;
+        margin-bottom: .2em;
+    }
+
+    .track-container p{
+        font-size: .85rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .container{
+        max-width: 1200px;
+    }
+
+    .s1{
+        height: 85vh;
+    }
+
+    .hero-container{
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    .hero-contents{
+        text-align: left;
+        width: 100%;
+        padding: 0 2em;
+    }
+
+    .c1, .c2, .c3{
+        display: unset;
+        align-items: unset;
+        justify-content: unset;
+    }
+
+    .c1{
+        background: linear-gradient(to right, #01426def, #01426dca, #01426d73, #01426d34, #01426d00, #01426d00), url(../images/cargo-ship-sea.jpeg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .c2{
+        background: linear-gradient(to right, #01426d, #01426df1, #01426df1, #01426dc0, #01426d68, #01426d34, #01426d12, #01426d00), url(../images/logistics-transportation-cargo-ship-cargo-plane-with-working-crane-bridge-shipyard-sunrise-logistic-import-export-transport-industry-background-ai-generative.jpeg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .c3{
+        background: linear-gradient(to right, #01426d, #01426dde, #01426d8f, #01426d4b, #01426d4b, #01426d4b), url(../images/abundant-crates-cardboard-filled-warehouse-generated-by-ai.jpeg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    #left, #right{
+        display: unset;
+        position: absolute;
+        color: black;
+        padding: .5em;
+        border-radius: 50%;
+        background: white;
+        font-size: 1.5rem;
+        z-index: 999;
+        cursor: pointer;
+        transition: .3s;
+    }
+
+    #left{
+        top: 75%;
+        left: 10%;
+        transform: translate(-11%, -75%);
+    }
+
+    #right{
+        top: 75%;
+        right: 10%;
+        transform: translate(-18%, -75%);
+    }
+
+    #left:hover, #right:hover{
+        background: var(--primary2);
+        color: white;
+    }
+
+    .hero-contents h1{
+        margin: unset;
+        width: 65%;
+        font-size: 3rem;
+    }
+
+    .hero-contents p{
+        font-size: 1.2rem;
+        margin: 1em 0 1.5em;
+    }
+
+    .hero-contents button{
+        padding: 1em 2.5em;
+        cursor: pointer;
+    }
+
+    .solutions{
+        top: 85%;
+        width: 1020px;
+    }
+
+    .sol{
+        padding: 2em 2.5em;
+    }
+
+    .sol-content h3{
+        font-size: 1.4rem;
+    }
+
+    .sol i{
+        font-size: 2.8rem;
+    }
+
+    .s7{
+        margin-top: 6em;
+    }
+
+    .track-container{
+        width: 65%;
+        padding: 2.5em;
+    }
+
+    .track-container::after{
+        right: -2%;
+    }
+
+    .track-container h2{
+        font-size: 2rem;
+    }
+
+    .track-container p{
+        font-size: .9rem;
+    }
+
+    .input-container button{
+        padding: 1em 2.5em;
+        font-size: .9rem;
+        margin-top: .7em;
+    }
+
+    .c4{
+        display: flex;
+        align-items: center;
+        gap: 6em;
+        padding: 3em 1em 5em;
+    }
+
+    .about-items{
+        width: 45%;
+        margin: 0;
+    }
+
+    .about-items h2{
+        width: 90%;
+        font-size: 2.1rem;
+    }
+
+    .about-items button{
+        padding: 1.3em 2.5em;
+        font-size: .9rem;
+        text-transform: uppercase;
+    }
+
+    .about-img{
+        width: 55%;
+    }
+
+    .services-content{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .flex1{
+        width: unset;
+    }
+
+    .ship{
+        width: 71%;
+    }
+
+    .s3{
+        padding: 4em 0 5em;
+    }
+
+    .skew-c{
+        top: -23%;
+    }
+
+    .services-heading-content h2{
+        font-size: 2.2rem;
+    }
+
+    .services-heading-content{
+        margin-bottom: 1.3em;
+    }
+
+    .services-info i{
+        font-size: 3rem;
+    }
+
+    .s4{
+        padding: 5em 0;
+    }
+
+    .c6-heading h2{
+        font-size: 2.2rem;
+    }
+
+    .c6-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 4em;
+    }
+
+    .c6-header button{
+        cursor: pointer;
+    }
+
+    .choose{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .choose-contents a h3{
+        font-size: 1.3rem;
+    }
+
+    .choose-contents a h3 i{
+        font-size: 1.2rem;
+    }
+
+    .choose-contents{
+        width: 50%;
+    }
+
+    .s5{
+        padding: 6em 0;
+    }
+
+    .c7-heading h2{
+        font-size: 2.2rem;
+    }
+
+    .c7-heading p{
+        width: 65%;
+        font-size: .9rem;
+        margin-bottom: 4em;
+    }
+
+    .goals-items{
+        display: flex;
+        flex-direction: row;
+        gap: 5em;
+    }
+
+    .goals-content{
+        justify-content: space-between;
+    }
+
+    .s-testimonials{
+        padding: 5em 0;
+    }
+
+    .c-testimonials{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2em;
+    }
+
+    .t-heading{
+        width: 38%;
+    }
+
+    .testimonial-container{
+        width: 48%;
+    }
+
+    .t-heading h2{
+        font-size: 2.2rem;
+    }
+
+    .t-heading p{
+        font-size: .9rem;
+    }
+
+    .s6{
+        padding: 8em 0;
+    }
+
+    .contact h2{
+        font-size: 3.1rem;
+    }
+
+    .contact button{
+        margin-top: 1.5em;
+    }
+
+}
