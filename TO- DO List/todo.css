@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #2f363e;
+    background-image: url(top-view-notebook-with-checklist-desk.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+
+
+}
+
+.box{
+    position: relative;
+    width: 450px;
+    height: 550px;
+    padding: 30px 50px;
+    border-radius: 30px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(23px);
+    box-shadow: 25px 25px 75px black;
+}
+h2{
+    width: 100%;
+    font-weight: 600;
+    text-align: center;
+    color: black;
+    font-size: 1.75rem;
+}
+#inputBx{
+    position: relative;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 15px 20px;
+    border-radius: 20px;
+    margin-top: 7px;
+    font-size: 1rem;
+
+}
+.box li{
+    position: relative;
+    width: calc(100% - 40px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: blue;
+    margin: 15px 0;
+    padding: 10px 10px 10px 45px;
+    min-height: 45px;
+    cursor: pointer;
+    border-radius: 20px;
+    color: white;
+}
+.box li i{
+    position: absolute;
+    right: -40px;
+    width: 30px;
+    height: 30px;
+    background: white;
+    border-radius: 50%;
+}
+.box li.done{
+    background: red;
+}
+.box li i::before {
+    content: '';
+    top: 13px;
+    left: 7px;
+    position: absolute;
+    width: 18px;
+    height: 3px;
+    background: black;
+    transform: rotate(46deg);
+
+}
+.box li i::after{
+    content: '';
+    top:13px;
+    left: 6px;
+    position: absolute;
+    width: 18px;
+    height: 3px;
+    background: black;
+    transform: rotate(-46deg);
+
+}
+.box li::before
+{
+    content: '';
+    position: absolute;
+    left: 8px;
+    width: 30px;
+    height: 30px;
+    background: #2f363e;
+    border-radius: 50%;
+}
+
+.box li.done:after{
+    content: '';
+    position: absolute;
+    left: 16px;
+    width: 12px;
+    height: 6px;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+    transform: rotate(315deg);
+}
+#list{
+    position: relative;
+    margin-top: 20px;
+    height: 350px;
+    overflow-y: auto;
+    padding-right: 20px;
+}
