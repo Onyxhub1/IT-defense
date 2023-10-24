@@ -1,0 +1,549 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: #fca431;
+    --secondary-color: #ff800039;
+    --back-color: whitesmoke;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: var(--back-color);
+}
+
+.no-scroll{
+    overflow: hidden;
+}
+
+.header{
+    position: sticky;
+    top: 0;
+    background: #e5e5e5;
+    z-index: 999;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: .7em 1em;
+    align-items: center;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+header a h1 {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+header a h1 i {
+    color: var(--primary-color);
+}
+
+nav{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.853);
+    gap: 45px;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s;
+    z-index: 999;
+}
+
+.active{
+    opacity: 1;
+    pointer-events: all;
+}
+
+nav img{
+    width: 90px;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+nav ul li{
+    list-style: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.burger{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 5px;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.line1, .line2, .line3{
+    width: 30px;
+    height: 2px;
+    background: var(--primary-color);
+    transition: .3s;
+    border-radius: 1em;
+}
+
+.line1{
+    width: 40px;
+}
+
+.line3{
+    width: 25px;
+}
+
+.rotate .line1{
+    transform: translateY(7px) rotate(135deg);
+    width: 30px;
+}
+.rotate .line2{
+    transform: translateX(30px);
+    opacity: 0;
+}
+
+.rotate .line3{
+    transform: translateY(-7px) rotate(-135deg);
+    width: 30px;
+} 
+
+.hero-sec{
+    background: linear-gradient(0deg, #000000b1, #000000b1), url(../images/cap-cam.png);
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+}
+
+.hero{
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.hero h1{
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 2rem;
+    margin: 2px;
+}
+
+.hero p{
+    font-size: .8rem;
+}
+
+.second{
+    background: var(--back-color);
+}
+
+.c3{
+    padding: 10px 10px 70px;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.contact-info{
+    margin-bottom: 3em;
+}
+
+.c3 h2{
+    margin: 1.5em 0 1em;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.infos{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.info{
+    display: flex;
+    gap: .8em;
+    align-items: center;
+}
+
+.info i{
+    font-size: 1.7rem;
+    color: var(--primary-color);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    width: 100%;
+    margin-bottom: 3em;
+}
+
+.input-container{
+    width: 100%;
+    position: relative;
+}
+
+.input-container input, textarea{
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 1em .5em;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    background: var(--back-color);
+    transition: .3s;
+}
+
+.input-container input::placeholder{
+    opacity: 0;
+}
+
+.input-container label{
+    position: absolute;
+    left: 6%;
+    top: 50%;
+    transform: translate(-6%, -50%);
+    transition: .3s;
+}
+
+input:focus{
+    border-bottom: 2px solid var(--primary-color);
+}
+
+input:focus ~ label,
+input:valid ~ label{
+    transform: translate(-6%, -50%) translateY(-30px) translateX(-16px);
+    font-size: .8rem;
+}
+
+textarea:focus{
+    border-bottom: 2px solid var(--primary-color);
+}
+
+#message:focus ~ .message,
+#message:valid ~ .message{
+    top: -20%;
+    transform: translateX(-18px);
+    font-size: .8rem;
+}
+
+form button{
+    width: 10rem;
+    padding: .8em;
+    font-size: 1rem;
+    border-radius: .7em;
+    background: var(--primary-color);
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+
+
+footer {
+    background: linear-gradient(0deg, #000000ba, #000000ba), url(../images/canon-lens-captures-glass-selective-focus-generated-by-ai.jpeg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.last-page {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1em;
+}
+
+.last-page-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    padding: 4em 2rem 3rem;
+    text-align: center;
+}
+
+.last-page h2,
+h1 {
+    text-align: center;
+}
+
+.contact-us h1 {
+    font-weight: 400;
+    margin: 1rem;
+    font-size: 1.5rem;
+}
+
+.contact-us a {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    text-decoration: none;
+    color: white;
+    font-weight: 200;
+    justify-content: center;
+}
+
+.contact-us a i {
+    background: white;
+    color: black;
+    padding: .6rem;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    transition: .3s;
+}
+
+.contact-us a:hover i {
+    background: var(--primary-color);
+    color: white;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+}
+
+.logo a h1 {
+    display: flex;
+    align-items: center;
+}
+
+.logo a h1 i {
+    color: var(--primary-color);
+}
+
+.quick-links h1 {
+    font-weight: 400;
+    margin: .8rem;
+    font-size: 1.5rem;
+}
+
+.links ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.links ul li a {
+    text-decoration: none;
+    color: rgb(165, 165, 165);
+    font-weight: 200;
+}
+
+.socials h1 {
+    font-weight: 400;
+    margin: .8rem;
+    font-size: 1.5rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons a {
+    color: white;
+    text-decoration: none;
+}
+
+.social-icons a i {
+    font-size: 1.5rem;
+    padding: .7rem;
+    background: rgb(27, 27, 27);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.last-page p {
+    font-size: .8rem;
+    font-weight: 200;
+    text-align: center;
+}
+
+@media screen and (min-width: 768px){
+    header{
+        padding: .7em 1.5em;
+    }
+    header nav{
+        position: unset;
+        z-index: 999;
+        background: none;
+        width: unset;
+        height: unset;
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    header nav img{
+        display: none;
+    }
+
+    header nav ul{
+        flex-direction: row;
+        gap: 3em;
+    }
+
+    header nav ul li a{
+        color: white;
+        font-weight: 300;
+        font-size: .85rem;
+        position: relative;
+    }
+
+    header nav ul li a::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background: var(--primary-color);
+        bottom: -20%;
+        left: 0;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: .3s ease;
+    }
+
+    header nav ul li a:hover::after{
+        transform: scaleX(1);
+        transform-origin: right;
+    }
+
+    header .burger{
+        display: none;
+    }
+
+    .hero h1{
+        font-size: 2.5rem;
+    }
+
+    .hero p{
+        font-size: .9rem;
+        font-weight: 300;
+    }
+
+    .c3 {
+        padding: 6em 2em 6em;
+    }
+
+    .contact{
+        display: flex;
+        gap: 2em;
+    }
+
+    .contact-info{
+        width: 50%;
+    }
+
+    .contact-info h2 {
+        margin: 0 0 1em;
+    }
+}
+
+@media screen and (min-width: 800px) {
+
+    footer .last-page-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: start;
+        width: 100%;
+        padding: 4em 1em;
+    }
+
+    .contact-us h1 {
+        font-size: 1.5rem;
+        margin: 1rem 0;
+    }
+
+    .socials h1 {
+        font-size: 1.5rem;
+    }
+
+    .quick-links h1 {
+        font-size: 1.5rem;
+    }
+
+    .contact{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    header,
+    .container {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    header {
+        padding: .9em 2em;
+    }
+
+    header nav ul {
+        gap: 4em;
+    }
+
+    /* .hero-section h1{
+        font-size: 4rem;
+    } */
+
+    .c3 {
+        padding: 6em 2em 6em;
+    }
+
+    .contact {
+        gap: 6em;
+    }
+
+    .contact-info h2 {
+        margin: 0 0 1em;
+    }
+
+    .infos {
+        gap: 2em;
+    }
+
+    .info {
+        background: var(--secondary-color);
+        padding: 1.5em 2em;
+        border-radius: .2em;
+        box-shadow: -2px 5px 15px rgb(206, 206, 206);
+    }
+
+    .info i {
+        font-size: 2rem;
+        color: white;
+    }
+
+}

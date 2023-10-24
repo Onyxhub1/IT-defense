@@ -1,0 +1,656 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #fca431;
+    --secondary-color: #a8a29c;
+    --back-color: whitesmoke;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--back-color);
+}
+
+.no-scroll{
+    overflow: hidden;
+}
+
+.s1{
+    background: linear-gradient(0deg, #303030ae, #303030ae), url(../images/abstract-glass-circle-pattern-zoom-lens-creates-creativity-generated-by-ai.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 1.5em;
+    align-items: center;
+}
+
+header a{
+    color: white;
+    text-decoration: none;
+}
+
+.header a h1{
+    display: flex;
+    align-items: center;
+}
+
+.header a h1 i{
+    color: var(--primary-color);
+}
+
+
+
+nav {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.853);
+    gap: 45px;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s;
+    z-index: 999;
+}
+
+.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+nav img {
+    width: 90px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.burger {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 5px;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.line1,
+.line2,
+.line3 {
+    width: 30px;
+    height: 2px;
+    background: var(--primary-color);
+    transition: .3s;
+    border-radius: 1em;
+}
+
+.line1 {
+    width: 40px;
+}
+
+.line3 {
+    width: 25px;
+}
+
+.rotate .line1 {
+    transform: translateY(7px) rotate(135deg);
+    width: 30px;
+}
+
+.rotate .line2 {
+    transform: translateX(30px);
+    opacity: 0;
+}
+
+.rotate .line3 {
+    transform: translateY(-7px) rotate(-135deg);
+    width: 30px;
+}
+
+.hero{
+    height: 90vh;
+}
+
+.c2{
+    padding: 2em;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section{
+    text-align: center;
+    margin: 10px 0;
+}
+
+.hero-section h1{
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 2.5rem;
+    margin: .2em;
+}
+
+.hero-section h2{
+    font-weight: 500;
+    margin-bottom: .2em;
+}
+
+.hero-section p{
+    font-size: .85rem;
+    font-family: 300;
+    margin-bottom: 4em;
+}
+
+.c3{
+    padding: 3em 1.2em 4em;
+    text-align: center;
+}
+
+.about-sec h3{
+    text-transform: uppercase;
+    font-weight: 400;
+    color: grey;
+    margin-bottom: .6em;
+}
+
+.about-sec p{
+    font-size: .8rem;
+    letter-spacing: .9px;
+    font-weight: 300;
+    line-height: 1.5rem;
+}
+
+.about-sec a button{
+    margin-top: 1.5em;
+    text-transform: uppercase;
+    font-size: .7rem;
+    font-weight: 400;
+    background: var(--back-color);
+    color: black;
+    text-decoration: none;
+    padding: 1.5em 2.8em;
+    border: .5px solid rgba(0, 0, 0, 0.408);
+    cursor: pointer;
+    letter-spacing: .9px;
+    transition: .3s;
+}
+
+.about-sec a button:hover{
+    background: var(--primary-color);
+    color: white;
+}
+
+.about-sec{
+    margin-bottom: 3em;
+}
+
+.portfolio-sec{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.row{
+    padding: 0 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.picture1, .picture{
+    width: 100%;
+    height: 20em;
+    color: white;
+}
+
+.picture1 h3, .picture h3{
+    font-weight: 400;
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+    display: flex;
+    align-items: end;
+}
+
+.nature{
+    background: url(../images/bird-with-yellow-head-red-feathers-sits-branch-with-flower-background.jpeg);
+    background-size: cover;
+    background-position: top;
+}
+
+.sunset{
+    background: url(../images/backpacker-relax-mountain-with-camera-adn-sunset.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.city {
+    background: url(../images/ginza-tokyo-around-midnight-5k-s0.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.fashion {
+    background: url(../images/fashion.png);
+    background-size: cover;
+    background-position: top;
+}
+
+.bw {
+    background: url(../images/black-and-white.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.silhouette {
+    background: url(../images/silhouette-teamwork-helping-hand-trust-help-success-mountains-hikers-celebrate-with-hands-up-help-each-other-top-mountain-sunset-landscape.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.concept {
+    background: url(../images/concept.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.portfolio-sec{
+    text-align: center;
+    margin-bottom: 5em;
+    padding: 0 1em;
+}
+
+.portfolio-sec a button {
+    margin-top: 1.5em;
+    text-transform: uppercase;
+    font-size: .7rem;
+    font-weight: 400;
+    background: var(--back-color);
+    color: black;
+    text-decoration: none;
+    padding: 1.5em 2.8em;
+    border: .5px solid rgba(0, 0, 0, 0.408);
+    cursor: pointer;
+    letter-spacing: .9px;
+    transition: .3s;
+}
+
+.portfolio-sec a button:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+.contact-section{
+    border-top: .5px solid rgba(0, 0, 0, 0.411);
+}
+
+.c4{
+    padding: 3em 1em 3em;
+}
+
+.contact-us{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5em;
+}
+
+.contact-us p{
+    font-size: .8rem;
+}
+
+.contact-us h2{
+    font-weight: 500;
+}
+
+.contact-us i{
+    background: var(--primary-color);
+    color: white;
+    padding: .3em;
+    font-size: 2.5rem;
+    border-radius: 50%;
+}
+
+
+
+footer{
+    background: linear-gradient(0deg, #000000d6, #000000d6), url(../images/canon-lens-captures-glass-selective-focus-generated-by-ai.jpeg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.last-page{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1em;
+}
+
+.last-page-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    padding: 4em 2rem 3rem;
+    text-align: center;
+}
+
+.last-page h2, h1{
+    text-align: center;
+}
+
+.contact-us h1{
+    font-weight: 400;
+    margin: 1rem;
+    font-size: 1.5rem;
+}
+
+.contact-us a{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    text-decoration: none;
+    color: white;
+    font-weight: 200;
+    justify-content: center;
+}
+
+.contact-us a i{
+    background: white;
+    color: black;
+    padding: .6rem;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    transition: .3s;
+}
+
+.contact-us a:hover i{
+    background: var(--primary-color);
+    color: white;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+}
+
+.logo a h1 {
+    display: flex;
+    align-items: center;
+}
+
+.logo a h1 i {
+    color: var(--primary-color);
+}
+
+.quick-links h1{
+    font-weight: 400;
+    margin: .8rem;
+    font-size: 1.5rem;
+}
+
+.links ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.links ul li a{
+    text-decoration: none;
+    color: rgb(165, 165, 165);
+    font-weight: 200;
+}
+
+.socials h1{
+    font-weight: 400;
+    margin: .8rem;
+    font-size: 1.5rem;
+}
+
+.social-icons{
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons a{
+    color: white;
+    text-decoration: none;
+}
+
+.social-icons a i{
+    font-size: 1.5rem;
+    padding: .7rem;
+    background: rgb(27, 27, 27);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.last-page p{
+    font-size: .8rem;
+    font-weight: 200;
+    text-align: center;
+}
+
+@media screen and (min-width: 768px){
+
+    header{
+        padding: 1em 2em;
+    }
+    
+    header nav{
+        position: unset;
+        z-index: 999;
+        background: none;
+        width: unset;
+        height: unset;
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    header nav img{
+        display: none;
+    }
+
+    header nav ul{
+        flex-direction: row;
+        gap: 3em;
+    }
+
+    header nav ul li a{
+        color: white;
+        font-weight: 300;
+        font-size: .8rem;
+        position: relative;
+    }
+
+    header nav ul li a::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background: var(--primary-color);
+        bottom: -20%;
+        left: 0;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: .3s ease;
+    }
+
+    header nav ul li a:hover::after{
+        transform: scaleX(1);
+        transform-origin: right;
+    }
+
+    header .burger{
+        display: none;
+    }
+
+    .hero-section h1{
+        font-size: 3rem;
+    }
+
+    .hero-section p{
+        width: 70%;
+        margin: .8em auto 4em;
+    }
+
+    .about-sec h3{
+        font-size: 1.4rem;
+    }
+    
+}
+
+@media screen and (min-width: 800px) {
+
+    footer .last-page-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: start;
+        width: 100%;
+        padding: 4em 1em;
+    }
+
+    .contact-us h1 {
+        font-size: 1.5rem;
+        margin: 1rem 0;
+    }
+
+    .socials h1 {
+        font-size: 1.5rem;
+    }
+
+    .quick-links h1 {
+        font-size: 1.5rem;
+    }
+
+    .about-sec p{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .c3{
+        padding: 5em 1.2em 3em;
+    }
+
+    .about-sec a button{
+        margin-top: 2em;
+    }
+
+    .row{
+        flex-direction: row;
+        gap: unset;
+    }
+
+    .portfolio-sec{
+        gap: unset;
+    }
+
+    .portfolio-sec a button{
+        margin-top: 4em;
+    }
+    
+}
+
+
+@media screen and (min-width: 1024px){
+
+    header, .container{
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    header{
+        padding: .9em 2em;
+    }
+
+    header nav ul{
+        gap: 4em;
+    }
+
+    .hero-section h1{
+        font-size: 3.5rem;
+    }
+
+    .hero{
+        height: 90vh;
+    }
+
+    .about-sec h3{
+        font-size: 1.5rem;
+    }
+
+    .about-sec p{
+        font-size: .9rem;
+        font-weight: 200;
+    }
+
+    .about-sec a button{
+        margin-top: 3em;
+    }
+
+    .picture1{
+        height: 30em;
+    }
+
+    .picture{
+        height: 24em;
+    }
+
+    .c4{
+        padding: 4em 1em 4em;
+    }
+
+    .contact-us{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .portfolio-sec a button{
+        margin-top: 6em;
+    }
+
+    .picture:hover h3,
+    .picture1:hover h3{
+        transition: .3s;
+        cursor: pointer;
+    }
+
+    .picture:hover h3,
+    .picture1:hover h3{
+        color: var(--primary-color);
+        background: rgba(0, 0, 0, 0.409);
+    }
+
+}

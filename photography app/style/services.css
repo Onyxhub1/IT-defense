@@ -1,0 +1,578 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #fca431;
+    --secondary-color: #a8a29c;
+    --back-color: whitesmoke;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--back-color);
+}
+
+.no-scroll{
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: .7em 1em;
+    align-items: center;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+header a h1 {
+    display: flex;
+    align-items: center;
+}
+
+header a h1 i {
+    color: var(--primary-color);
+}
+
+nav {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.853);
+    gap: 45px;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s;
+    z-index: 999;
+}
+
+.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+nav img {
+    width: 90px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.burger {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 5px;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.line1,
+.line2,
+.line3 {
+    width: 30px;
+    height: 2px;
+    background: var(--primary-color);
+    transition: .3s;
+    border-radius: 1em;
+}
+
+.line1 {
+    width: 40px;
+}
+
+.line3 {
+    width: 25px;
+}
+
+.rotate .line1 {
+    transform: translateY(7px) rotate(135deg);
+    width: 30px;
+}
+
+.rotate .line2 {
+    transform: translateX(30px);
+    opacity: 0;
+}
+
+.rotate .line3 {
+    transform: translateY(-7px) rotate(-135deg);
+    width: 30px;
+}
+
+.first{
+    background: linear-gradient(0deg, #000000bb, #000000bb), url(../images/woman-viewing-photos-camera.jpeg);
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.hero-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    padding: 1em;
+}
+
+.hero h1{
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 1.9rem;
+    margin: 2px;
+}
+
+.hero-section p{
+    font-weight: 300;
+    text-align: center;
+    font-size: .9rem;
+}
+
+.c3{
+    padding: 3em .5em;
+}
+
+.c3-desc-content p{
+    font-weight: 300;
+    font-size: .8rem;
+    letter-spacing: .9px;
+    line-height: 1.5rem;
+}
+
+.c3-desc-content p span{
+    font-style: italic;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.c3-services{
+    color: black;
+    padding: 1em;
+    margin: 3em 0 0;
+    border-radius: .6em;
+}
+
+.c3-services h1{
+    font-weight: 500;
+    margin: 0 0 1em;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.services-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+}
+
+.services h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: .7em;
+}
+
+.services-content{
+    padding: 2.5em 1.5em;
+    color: white;
+    border-radius: .2em;
+}
+
+.services-content h3 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 1em;
+}
+
+.services-content p{
+    font-size: .8rem;
+    font-weight: 300;
+    letter-spacing: .9px;
+}
+
+.wedding{
+    background: linear-gradient(0deg, #0000008a, #0000008a), url(../images/wedding.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.event{
+    background: linear-gradient(0deg, #0000008a, #0000008a), url(../images/Events.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.portrait{
+    background: linear-gradient(0deg, #0000008a, #0000008a), url(../images/portrait.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.nature{
+    background: linear-gradient(0deg, #0000008a, #0000008a), url(../images/nature-land.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.product{
+    background: linear-gradient(0deg, #0000008a, #0000008a), url(../images/product.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.contact-section {
+    border-top: .5px solid rgba(0, 0, 0, 0.411);
+}
+
+.c4 {
+    padding: 3em 1em 3em;
+}
+
+.contact-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5em;
+}
+
+.contact-us p {
+    font-size: .8rem;
+}
+
+.contact-us h2 {
+    font-weight: 500;
+}
+
+.contact-us i {
+    background: var(--primary-color);
+    color: white;
+    padding: .3em;
+    font-size: 2.5rem;
+    border-radius: 50%;
+}
+
+footer {
+    background: linear-gradient(0deg, #000000d6, #000000d6), url(../images/canon-lens-captures-glass-selective-focus-generated-by-ai.jpeg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.last-page {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1em;
+}
+
+.last-page-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    padding: 4em 2rem 3rem;
+    text-align: center;
+}
+
+.last-page h2,
+h1 {
+    text-align: center;
+}
+
+.contact-us h1 {
+    font-weight: 400;
+    margin: 1rem;
+    font-size: 1.5rem;
+}
+
+.contact-us a {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    text-decoration: none;
+    color: white;
+    font-weight: 200;
+    justify-content: center;
+}
+
+.contact-us a i {
+    background: white;
+    color: black;
+    padding: .6rem;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    transition: .3s;
+}
+
+.contact-us a:hover i {
+    background: var(--primary-color);
+    color: white;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+}
+
+.logo a h1 {
+    display: flex;
+    align-items: center;
+}
+
+.logo a h1 i {
+    color: var(--primary-color);
+}
+
+.quick-links h1 {
+    font-weight: 400;
+    margin: .8rem;
+    font-size: 1.5rem;
+}
+
+.links ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.links ul li a {
+    text-decoration: none;
+    color: rgb(165, 165, 165);
+    font-weight: 200;
+}
+
+.socials h1 {
+    font-weight: 400;
+    margin: .8rem;
+    font-size: 1.5rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons a {
+    color: white;
+    text-decoration: none;
+}
+
+.social-icons a i {
+    font-size: 1.5rem;
+    padding: .7rem;
+    background: rgb(27, 27, 27);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.last-page p {
+    font-size: .8rem;
+    font-weight: 200;
+    text-align: center;
+}
+
+@media screen and (min-width: 768px){
+
+    header{
+        padding: .7em 1.5em;
+    }
+    header nav{
+        position: unset;
+        z-index: 999;
+        background: none;
+        width: unset;
+        height: unset;
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    header nav img{
+        display: none;
+    }
+
+    header nav ul{
+        flex-direction: row;
+        gap: 3em;
+    }
+
+    header nav ul li a{
+        color: white;
+        font-weight: 300;
+        font-size: .9rem;
+        position: relative;
+    }
+
+    header nav ul li a::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background: var(--primary-color);
+        bottom: -20%;
+        left: 0;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: .3s ease;
+    }
+
+    header nav ul li a:hover::after{
+        transform: scaleX(1);
+        transform-origin: right;
+    }
+
+    header .burger{
+        display: none;
+    }
+
+    .c3{
+        gap: 2em;
+        margin: 3em 0;
+    }
+
+    .c3-desc-content p{
+        line-height: 2em;
+        font-size: .85rem;
+        letter-spacing: .9px;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .services-container{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    .services-content{
+        height: 90%;
+    }
+}
+
+@media screen and (min-width: 800px) {
+
+    footer .last-page-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: start;
+        width: 100%;
+        padding: 4em 1em;
+    }
+
+    .contact-us h1 {
+        font-size: 1.5rem;
+        margin: 1rem 0;
+    }
+
+    .socials h1 {
+        font-size: 1.5rem;
+    }
+
+    .quick-links h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 1024px){
+
+    header, .container{
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    header{
+        padding: .9em 2em;
+    }
+
+    header nav ul{
+        gap: 4em;
+    }
+
+    .c3{
+        margin: 4em auto;
+    }
+
+    .c3-desc-content p{
+        font-size: .9rem;
+    }
+
+    .hero h1{
+        font-size: 2.5rem;
+    }
+
+    .hero p{
+        font-size: .9rem;
+        letter-spacing: .8px;
+    }
+
+    .c4 {
+        padding: 4em 1em 4em;
+    }
+
+    .contact-us {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .c3-services h1{
+        width: 40%;
+        margin: 0 auto 2em;
+    }
+
+    .services-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+
+    .services-content {
+        height: 18em;
+    }
+
+    .services-content h3{
+        transform: translateY(200px);
+        transition: .4s;
+    }
+
+    .services-content p{
+        transform: translateY(100%);
+        opacity: 0;
+        pointer-events: none;
+        transition: .5s;
+    }
+
+    .services-content:hover h3{
+        transform: translateY(0);
+    }
+
+    .services-content:hover p{
+        transform: translateY(0);
+        pointer-events: all;
+        opacity: 1;
+    }
+
+}

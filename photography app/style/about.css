@@ -1,0 +1,514 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #fca431;
+    --secondary-color: #a8a29c;
+    --back-color: whitesmoke;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--back-color);
+}
+
+.no-scroll{
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: .7em 1em;
+    align-items: center;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+header a h1 {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+header a h1 i {
+    color: var(--primary-color);
+}
+
+nav {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.853);
+    gap: 45px;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s;
+    z-index: 999;
+}
+
+.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.burger {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 5px;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.line1,
+.line2,
+.line3 {
+    width: 30px;
+    height: 2px;
+    background: var(--primary-color);
+    transition: .3s;
+    border-radius: 1em;
+}
+
+.line1 {
+    width: 40px;
+}
+
+.line3 {
+    width: 25px;
+}
+
+.rotate .line1 {
+    transform: translateY(7px) rotate(135deg);
+    width: 30px;
+}
+
+.rotate .line2 {
+    transform: translateX(30px);
+    opacity: 0;
+}
+
+.rotate .line3 {
+    transform: translateY(-7px) rotate(-135deg);
+    width: 30px;
+}
+
+.hero{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.678), rgba(0, 0, 0, 0.689)), url(../images/professional-photographer-takes-close-up-with-slr-camera-generated-by-ai.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+}
+
+.hero-sec{
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-sec h1{
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.c2{
+    padding: .7em;
+    width: 100%;
+}
+
+.about-us{
+    width: 100%;
+}
+
+.about-img{
+    width: 100%;
+}
+
+.about-img img{
+    width: 100%;
+    margin: 3em 0 2em;
+}
+
+.c2 p{
+    font-weight: 300;
+    line-height: 2em;
+    letter-spacing: .9px;
+    font-size: .8rem;
+}
+
+.about-content p span{
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.about-content .styled-name{
+    font-size: 2rem;
+    margin: .5em 0 2em;
+    font-family: 'Dancing Script', cursive;
+}
+
+hr{
+    margin: 0 0 2em;
+}
+
+.mission{
+    padding: .5em;
+    margin: 1em 0;
+    height: 3em;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.mission i{
+    transition: .3s;
+}
+
+.mission p span{
+    font-weight: bold;
+}
+
+.mission h3{
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: .7em;
+    cursor: pointer;
+}
+
+.reverse{
+    height: unset;
+}
+
+.times{
+    transform: rotate(45deg);
+}
+
+
+footer {
+    background: linear-gradient(0deg, #000000d6, #000000d6), url(../images/canon-lens-captures-glass-selective-focus-generated-by-ai.jpeg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.last-page {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1em;
+}
+
+.last-page-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    padding: 4em 2rem 3rem;
+    text-align: center;
+}
+
+.last-page h2,
+h1 {
+    text-align: center;
+}
+
+.contact-us h1 {
+    font-weight: 400;
+    margin: 1rem;
+    font-size: 1.5rem;
+}
+
+.contact-us a {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    text-decoration: none;
+    color: white;
+    font-weight: 200;
+    justify-content: center;
+}
+
+.contact-us a i {
+    background: white;
+    color: black;
+    padding: .6rem;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    transition: .3s;
+}
+
+.contact-us a:hover i {
+    background: var(--primary-color);
+    color: white;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+}
+
+.logo a h1 {
+    display: flex;
+    align-items: center;
+}
+
+.logo a h1 i {
+    color: var(--primary-color);
+}
+
+.quick-links h1 {
+    font-weight: 400;
+    margin: .8rem;
+    font-size: 1.5rem;
+}
+
+.links ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.links ul li a {
+    text-decoration: none;
+    color: rgb(165, 165, 165);
+    font-weight: 200;
+}
+
+.socials h1 {
+    font-weight: 400;
+    margin: .8rem;
+    font-size: 1.5rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons a {
+    color: white;
+    text-decoration: none;
+}
+
+.social-icons a i {
+    font-size: 1.5rem;
+    padding: .7rem;
+    background: rgb(27, 27, 27);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.last-page p {
+    font-size: .8rem;
+    font-weight: 200;
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    
+    header {
+        padding: .7em 1.5em;
+    }
+
+    header nav {
+        position: unset;
+        z-index: 999;
+        background: none;
+        width: unset;
+        height: unset;
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    header nav img {
+        display: none;
+    }
+
+    header nav ul {
+        flex-direction: row;
+        gap: 3em;
+    }
+
+    header nav ul li a {
+        color: white;
+        font-weight: 300;
+        font-size: .85rem;
+        position: relative;
+    }
+
+    header nav ul li a::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background: var(--primary-color);
+        bottom: -20%;
+        left: 0;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: .3s ease;
+    }
+
+    header nav ul li a:hover::after{
+        transform: scaleX(1);
+        transform-origin: right;
+    }
+
+    header .burger {
+        display: none;
+    }
+
+    .c2{
+        padding: 1em;
+    }
+
+    .about-us{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 2em;
+        margin: 3em 0 6em;
+    }
+
+    .about-img{
+        width: 50%;
+    }
+
+    .about-img img{
+        margin: 0;
+    }
+
+    .about-content{
+        width: 50%;
+    }
+
+    .about-content .styled-name{
+        margin: 0;
+    }
+
+    .c2 p{
+        letter-spacing: unset;
+        line-height: 1.7em;
+        margin-bottom: .8em;
+    }
+
+    .mission p{
+        line-height: 2em;
+        letter-spacing: .9px;
+    }
+
+    .mission, hr{
+        width: 70%;
+        margin: 1em auto;
+    }
+
+}
+
+@media screen and (min-width: 800px) {
+
+    footer .last-page-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: start;
+        width: 100%;
+        padding: 4em 1em;
+    }
+
+    .contact-us h1 {
+        font-size: 1.5rem;
+        margin: 1rem 0;
+    }
+
+    .socials h1 {
+        font-size: 1.5rem;
+    }
+
+    .quick-links h1 {
+        font-size: 1.5rem;
+    }
+}
+
+
+@media screen and (min-width: 1024px){
+
+    header, .container{
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    header{
+        padding: .9em 2em;
+    }
+
+    header nav ul{
+        gap: 4em;
+    }
+
+    .c2{
+        margin-bottom: 2em;
+    }
+
+    .c2 p{
+        line-height: 2em;
+        letter-spacing: .9px;
+    }
+
+    .mission, hr{
+        width: 60%;
+        margin: 1em auto;
+    }
+
+    .c2 p {
+        font-weight: 300;
+        line-height: 2em;
+        letter-spacing: .9px;
+        font-size: .9rem;
+    }
+
+    .flex-out{
+        display: flex;
+        gap: 2em;
+    }
+
+    .flex1{
+        width: 50%;
+    }
+
+    .mission, hr{
+        width: 100%;
+    }
+}
